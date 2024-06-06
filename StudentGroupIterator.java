@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class StudentGroupIterator implements Iterator<Student> {
@@ -15,7 +14,7 @@ public class StudentGroupIterator implements Iterator<Student> {
         Student[] students = new Student[names.length];
         int count = 0;
         for (String name : names) {
-           students[count] = new Student(name);
+           students[count] = new Student(name, count);
            count++;
 
         }//  System.out.println(Arrays.toString(names)); 
