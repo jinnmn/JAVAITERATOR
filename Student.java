@@ -1,6 +1,7 @@
 public class Student implements Comparable<Student>{
     public int id;
-
+    public String name;
+    
     @Override
     public String toString() {
         return this.name;
@@ -11,7 +12,7 @@ public class Student implements Comparable<Student>{
         this.id = id;
 
     }
-    public String name;
+    
     @Override
     public int compareTo(Student o) {
         // if (o.name.length() > this.name.length()) return 1;

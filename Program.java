@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.List;
 
 public class Program {
@@ -14,21 +14,27 @@ public class Program {
         group.addStudent(ivan);
         group.addStudent(igor);
         group.addStudent(alex);
-        // System.out.println(group.students);
+        System.out.println(group.students);
+        
+        //------------
+        Stream stream1 = new Stream();
+        stream1.addGroup(group);
+        System.out.println(stream1);
 
-        Iterator<Student> iterator = new StudentGroupIterator(group);
 
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
+        // Iterator<Student> iterator = new StudentGroupIterator(group);
 
-        for (Student student : group) {
-            System.out.println(student);
-        }
-        ArrayList<Student> arrayList = new ArrayList<>(List.of(ivan, igor, alex));
-        System.out.println(arrayList);
-        Collections.sort(arrayList, (s1 , s2) -> s1.id - s2.id);
-        System.out.println(arrayList);
+        // while (iterator.hasNext()) {
+        //     System.out.println(iterator.next());
+        // }
+
+        // for (Student student : group) {
+        //     System.out.println(student);
+        // }
+        // ArrayList<Student> arrayList = new ArrayList<>(List.of(ivan, igor, alex));
+        // System.out.println(arrayList);
+        // Collections.sort(arrayList, (s1 , s2) -> s1.id - s2.id);
+        // System.out.println(arrayList);
 
     }
 }
