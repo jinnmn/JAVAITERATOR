@@ -27,7 +27,7 @@ public class Stream implements Iterable<StudenrGroup> {
 
     @Override
     public Iterator<StudenrGroup> iterator() {
-        return new StreamIterator(this)
+        return new StreamIterator(this);
      }
 
     
