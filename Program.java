@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 
 
@@ -32,15 +33,19 @@ public class Program {
         while (sIterator.hasNext()) {
             System.out.println(sIterator.next().students);
         }
+        ArrayList<Stream> x = StreamService.streams;
+        System.out.println(x);
+        StreamService.sSort(x);
+        System.out.println(x);
 
 
 
-        //-------------
-        Iterator<Student> iterator = new StudentGroupIterator(group);
+        // //-------------
+        // Iterator<Student> iterator = new StudentGroupIterator(group);
 
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
+        // while (iterator.hasNext()) {
+        //     System.out.println(iterator.next());
+        // }
 
         // for (Student student : group) {
         //     System.out.println(student);

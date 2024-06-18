@@ -14,6 +14,7 @@ public class Stream implements Iterable<StudenrGroup> {
         this.id = count;
         this.stream = new ArrayList<StudenrGroup>();
         count++;
+        StreamService.streams.add(this);
     }
 
     @Override
