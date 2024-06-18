@@ -1,8 +1,7 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
-import javax.sql.rowset.spi.XmlReader;
-
-public class Stream {
+public class Stream implements Iterable<StudenrGroup> {
     public int id;
     public ArrayList<StudenrGroup> stream; 
     private static int count = 1 ; 
@@ -19,12 +18,17 @@ public class Stream {
 
     @Override
     public String toString() {
-        String str = "Группа №" + id + ":\n";
+        String str = "Поток №" + id + ":\n";
         for (StudenrGroup studenrGroup : stream) {
-            str =str +"\t" + studenrGroup.students;
+            str =str +"\t" + studenrGroup.students +"\n";
         }
         return str;
     }
+
+    @Override
+    public Iterator<StudenrGroup> iterator() {
+        return new StreamIterator(this)
+     }
 
     
     
